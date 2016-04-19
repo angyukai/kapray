@@ -89,6 +89,8 @@ DATABASES = {
 # Password validation
 # https://docs.djangoproject.com/en/1.9/ref/settings/#auth-password-validators
 
+# AUTH_USER_MODEL = 'signups.BaseUser'
+
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
@@ -125,9 +127,8 @@ STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
 STATIC_URL = '/static/'
 
 # Extra places for collectstatic to find static files.
-STATICFILES_DIRS = (
-    os.path.join(PROJECT_ROOT, 'static'),
-)
+
 # Simplified static file serving.
-# https://warehouse.python.org/project/whitenoise/
+# https://warehouse.python.org/projs.django.GzipManifestStaticFilesStorage'
+
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
